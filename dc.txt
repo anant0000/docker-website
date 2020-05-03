@@ -1,0 +1,7 @@
+docker run -dit -e WORDPRESS_DB_HOST=dbos -e WORDPRESS_DB_USER=anant -e WORDPRESS_DB_PASSWORD=redhat -e WORDPRESS_DB_NAME=mydb -v mywp_str:/var/www/html --name wpos -p 8080:80 --link dbos wordpress:5.1.1-php7.3-apache
+
+docker create volume  mysql 
+  973  docker run -dit -e MYSQL_ROOT_PASSWORD=rootpasswd -e  MYSQL_USER=anant -e MYSQL_PASSWORD=redhat -e  MYSQL_DATABASE=mydb -v mysql_str:/var/lib/mysql --name dbos mysql:5.7
+
+ docker volume create mysql_str 
+
